@@ -1,0 +1,16 @@
+{% load staticfiles %}
+{% include "navbar/navbar.html" %}
+<!-- INDEX -->
+<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+
+<div class="col-xs-12 main">
+	{% for i in imgs %}
+	<div class="col-xs-3 img">
+		<img src="{{ i.img.url }}">
+	</div>
+	{% endfor %}
+</div>
+
+<script type="text/javascript" src="{% static 'index.js' %}"></script>
+<!-- END OF INDEX -->
+{% include "navbar/footer.html" %}
